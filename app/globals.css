@@ -12,4 +12,22 @@ body {
   font-family: "Black Ops One", system-ui;
 }
 
+.nav-link {
+  position: relative;
+  padding-bottom: 4px;
+}
 
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: var(--color-espresso);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

@@ -8,14 +8,14 @@ export default function Navbar() {
             NOVAFIT
         </h1>
 
-        <div className="hidden md:flex gap-8 text-xl font-extrabold text-espresso">
-            <a href="/" className="border-b-2 border-espresso pb-1">Home</a>
-            <a href="/products">Shop</a>
-            <a href="/products?sort=new">New Arrivals</a>
-            <a href="/products?category=men">Men</a>
-            <a href="/products?category=women">Women</a>
-            <a href="/products?category=accessories">Accessories</a>
-        </div>
+       <div className="hidden md:flex gap-8 text-sm font-medium text-espresso">
+  <a href="/" className="nav-link">Home</a>
+  <a href="/products" className="nav-link">Shop</a>
+  <a href="/products?sort=new" className="nav-link">New Arrivals</a>
+  <a href="/products?category=men" className="nav-link">Men</a>
+  <a href="/products?category=women" className="nav-link">Women</a>
+  <a href="/products?category=accessories" className="nav-link">Accessories</a>
+</div>
 
         <div className="flex gap-5 items-center text-espresso">
             <Search size={30} className="cursor-pointer" />
