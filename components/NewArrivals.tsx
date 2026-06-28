@@ -3,6 +3,7 @@ const products = [
     id: 1,
     name: "Plaid Vintage",
     description: "Plaid vintage short sleeve shirt with frontal pocket",
+    stars: "⭐⭐⭐⭐⭐",                                                
     price: 23800,
     image:
       "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500",
@@ -11,6 +12,7 @@ const products = [
     id: 2,
     name: "Denim Vintage Shirt",
     description: "Denim vintage long sleeve shirt",
+    stars: "⭐⭐⭐⭐⭐",
     price: 34900,
     image:
       "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500",
@@ -19,6 +21,7 @@ const products = [
     id: 3,
     name: "Croc Vintage Shirt",
     description: "Multi-coloured vintage shirt with crocodile skin design",
+    stars: "⭐⭐⭐⭐⭐",
     price: 33000,
     image:
       "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500",
@@ -27,6 +30,43 @@ const products = [
     id: 4,
     name: "Stocky Vintage Shirt",
     description: "Stock multi-coloured patch vintage shirt for men and women",
+    stars: "⭐⭐⭐⭐⭐",
+    price: 35500,
+    image:
+      "https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500",
+  },
+  {
+    id: 4,
+    name: "Stocky Vintage Shirt",
+    description: "Stock multi-coloured patch vintage shirt for men and women",
+    stars: "⭐⭐⭐⭐⭐",
+    price: 35500,
+    image:
+      "https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500",
+  },
+  {
+    id: 4,
+    name: "Stocky Vintage Shirt",
+    description: "Stock multi-coloured patch vintage shirt for men and women",
+    stars: "⭐⭐⭐⭐⭐",
+    price: 35500,
+    image:
+      "https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500",
+  },
+  {
+    id: 4,
+    name: "Stocky Vintage Shirt",
+    description: "Stock multi-coloured patch vintage shirt for men and women",
+    stars: "⭐⭐⭐⭐⭐",
+    price: 35500,
+    image:
+      "https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500",
+  },
+  {
+    id: 4,
+    name: "Stocky Vintage Shirt",
+    description: "Stock multi-coloured patch vintage shirt for men and women",
+    stars: "⭐⭐⭐⭐⭐",
     price: 35500,
     image:
       "https://images.unsplash.com/photo-1602810316693-3667c854239a?w=500",
@@ -73,6 +113,9 @@ export default function NewArrivals() {
               </h4>
               <p className="text-sm text-cocoa/70 mb-3 line-clamp-2">
                 {product.description}
+              </p>
+              <p className="">
+                {product.stars}
               </p>
               <div className="flex items-center justify-between">
                 <span className="font-bold text-espresso">
