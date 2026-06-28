@@ -18,7 +18,7 @@ export default function Hero() {
               Quality clothing crafted with modern design and made for every occasion.
             </h2> */}
 
-            <div className="text-[50px] font-serif font-extrabold text-white">
+            <div className="lg:text-[70px] font-serif font-extrabold text-white">
                 <p>Quality clothing crafted with <span className="text-[#A78D78]"> modern design<br></br> and made</span> for every occasion.</p>
             </div>
 
