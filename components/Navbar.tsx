@@ -10,8 +10,8 @@ export default function Navbar() {
     { href: "/", label: "Home" },
     { href: "/products", label: "Shop" },
     { href: "/products?sort=new", label: "New Arrivals" },
-    { href: "/products?category=men", label: "Men" },
-    { href: "/products?category=women", label: "Women" },
+    // { href: "/products?category=men", label: "Men" },
+    // { href: "/products?category=women", label: "Women" },
     { href: "/products?category=accessories", label: "Accessories" },
   ];
 
