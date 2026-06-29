@@ -26,18 +26,19 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex ">
       {/* Left side - image */}
       <div
-        className="hidden md:flex w-1/2 relative bg-cover bg-center flex-col justify-between p-10"
+        className="hidden md:flex w-1/2 relative bg-cover bg-center flex-col justify-between p-10 "
         style={{
           backgroundImage:
             "url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=1200')",
+            //  filter: "brightness(0.6)",
         }}
       >
-        <div className="absolute inset-0 bg-espresso/40" />
+        <div className="absolute inset-0 bg-espresso/60" />
 
-        <h1 className="relative z-10 text-cream text-2xl font-serif font-bold">
+        <h1 className="relative z-10 text-white text-5xl font-serif font-bold">
           NovaFit
         </h1>
 
