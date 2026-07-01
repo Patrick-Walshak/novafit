@@ -90,7 +90,7 @@ export default function CheckoutPage() {
           <p className="text-camel text-sm font-semibold uppercase tracking-widest mb-1">
             Almost there
           </p>
-          <h1 className="text-3xl font-serif font-bold text-espresso mb-8">
+          <h1 className="text-3xl font-serif font-bold text-espresso mb-8"> 
             Checkout
           </h1>
 
