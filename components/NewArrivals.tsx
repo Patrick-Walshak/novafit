@@ -1,75 +1,77 @@
+import StarRating from "@/components/StarRating";
+
 const products = [
   {
     id: 1,
     name: "Plaid Vintage",
     description: "Plaid vintage short sleeve shirt with frontal pocket",
-    stars: "⭐⭐⭐⭐⭐",                                                
     price: 23800,
-    image:
-      "https://i.pinimg.com/736x/b9/89/0a/b9890a356c9cd33a0dca2048c47e1b31.jpg",
+    rating: 4.5,
+    reviews: 1619,
+    image: "https://i.pinimg.com/736x/b9/89/0a/b9890a356c9cd33a0dca2048c47e1b31.jpg",
   },
   {
     id: 2,
     name: "Denim Vintage Shirt",
     description: "Denim vintage long sleeve shirt",
-    stars: "⭐⭐⭐⭐⭐",
     price: 34900,
-    image:
-      "https://i.pinimg.com/736x/65/3a/e1/653ae1fab9aa3f38cfbca680ac701788.jpg",
+    rating: 4,
+    reviews: 843,
+    image: "https://i.pinimg.com/736x/65/3a/e1/653ae1fab9aa3f38cfbca680ac701788.jpg",
   },
   {
     id: 3,
     name: "Croc Vintage Shirt",
     description: "Multi-coloured vintage shirt with crocodile skin design",
-    stars: "⭐⭐⭐⭐⭐",
     price: 33000,
-    image:
-      "https://i.pinimg.com/736x/3e/59/dc/3e59dc1df59067513237369548119c46.jpg",
+    rating: 4.5,
+    reviews: 512,
+    image: "https://i.pinimg.com/736x/3e/59/dc/3e59dc1df59067513237369548119c46.jpg",
   },
   {
     id: 4,
     name: "Stocky Vintage Shirt",
     description: "Stock multi-coloured patch vintage shirt for men and women",
-    stars: "⭐⭐⭐⭐⭐",
     price: 35500,
-    image:
-      "https://i.pinimg.com/736x/54/4f/57/544f5722335445d68f54d76f5b73de0e.jpg",
+    rating: 3.5,
+    reviews: 298,
+    image: "https://i.pinimg.com/736x/54/4f/57/544f5722335445d68f54d76f5b73de0e.jpg",
   },
   {
-    id: 4,
-    name: "Stocky Vintage Shirt",
+    id: 5,
+    name: "Cargo Street Shirt",
     description: "Stock multi-coloured patch vintage shirt for men and women",
-    stars: "⭐⭐⭐⭐⭐",
     price: 35500,
-    image:
-      "https://i.pinimg.com/736x/83/9f/61/839f61f294ab63658eb735c6614609c9.jpg",
+    rating: 4,
+    reviews: 401,
+    image: "https://i.pinimg.com/736x/83/9f/61/839f61f294ab63658eb735c6614609c9.jpg",
   },
   {
-    id: 4,
-    name: "Stocky Vintage Shirt",
+    id: 6,
+    name: "Urban Classic Tee",
     description: "Stock multi-coloured patch vintage shirt for men and women",
-    stars: "⭐⭐⭐⭐⭐",
     price: 35500,
-    image:
-      "https://i.pinimg.com/736x/88/22/6a/88226a36ab59af3e5bb48fae52eb7593.jpg",
+    rating: 5,
+    reviews: 776,
+    image: "https://i.pinimg.com/736x/88/22/6a/88226a36ab59af3e5bb48fae52eb7593.jpg",
   },
   {
-    id: 4,
-    name: "Stocky Vintage Shirt",
+    id: 7,
+    name: "Retro Print Shirt",
     description: "Stock multi-coloured patch vintage shirt for men and women",
-    stars: "⭐⭐⭐⭐⭐",
     price: 35500,
-    image:
-      "https://i.pinimg.com/736x/f1/5b/be/f15bbe9085e970a8971330d9a2b9e47d.jpg",
+    rating: 4.5,
+    reviews: 334,
+    image: "https://i.pinimg.com/736x/f1/5b/be/f15bbe9085e970a8971330d9a2b9e47d.jpg",
   },
   {
-    id: 4,
-    name: "Stocky Vintage Shirt",
+    id: 8,
+    name: "Nova Essentials Tee",
     description: "Stock multi-coloured patch vintage shirt for men and women",
-    stars: "⭐⭐⭐⭐⭐",
     price: 35500,
-    image:
-      "https://i.pinimg.com/736x/7a/00/e6/7a00e6c6dc9332baf752e2cdf5f4ae1c.jpg",
+    rating: 3.5,
+    reviews: 189,
+    image: "https://i.pinimg.com/736x/7a/00/e6/7a00e6c6dc9332baf752e2cdf5f4ae1c.jpg",
   },
 ];
 
@@ -111,13 +113,11 @@ export default function NewArrivals() {
               <h4 className="font-semibold text-espresso mb-1">
                 {product.name}
               </h4>
-              <p className="text-sm text-cocoa/70 mb-3 line-clamp-2">
+              <p className="text-sm text-cocoa/70 mb-2 line-clamp-2">
                 {product.description}
               </p>
-              <p className="">
-                {product.stars}
-              </p>
-              <div className="flex items-center justify-between">
+              <StarRating rating={product.rating} reviews={product.reviews} />
+              <div className="flex items-center justify-between mt-3">
                 <span className="font-bold text-espresso">
                   ₦{product.price.toLocaleString()}.99
                 </span>
