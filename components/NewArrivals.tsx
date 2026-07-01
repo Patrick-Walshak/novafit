@@ -1,3 +1,4 @@
+"use client";
 import StarRating from "@/components/StarRating";
 
 const products = [
@@ -76,6 +77,23 @@ const products = [
 ];
 
 export default function NewArrivals() {
+
+  function addToCart(product: typeof products[0]) {
+  const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+  const existingIndex = cart.findIndex(
+    (item: any) => item.id === product.id && item.size === "M"
+  );
+
+  if (existingIndex > -1) {
+    cart[existingIndex].quantity += 1;
+  } else {
+    cart.push({ ...product, size: "M", quantity: 1 });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+  window.dispatchEvent(new Event("storage"));
+  alert(`${product.name} added to cart!`);
+}
   return (
     <section className="py-20 px-6 md:px-12 bg-cream">
       <div className="md:mx-32 flex items-end justify-between mb-10">
@@ -121,9 +139,15 @@ export default function NewArrivals() {
                 <span className="font-bold text-espresso">
                   ₦{product.price.toLocaleString()}.99
                 </span>
-                <button className="bg-cocoa text-cream text-xs font-medium px-3 py-2 rounded-md hover:bg-espresso transition">
-                  Add to Cart
-                </button>
+                <button
+                    onClick={(e) => {
+                      e.preventDefault(); // stops the card link from firing
+                      addToCart(product);
+                    }}
+                    className="bg-cocoa text-cream text-xs font-medium px-3 py-2 rounded-md hover:bg-espresso transition"
+                  >
+                    Add to Cart
+              </button>
               </div>
             </div>
           </div>
